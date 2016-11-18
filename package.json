@@ -1,0 +1,31 @@
+{
+  "name": "usastats",
+  "version": "1.0.0",
+  "description": "A website with USA statistics.",
+  "scripts": {
+    "prestart": "gulp build",
+    "start": "node dist/server/start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Peters and Aaron Roney",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^6.0.48",
+    "@types/express": "^4.0.34",
+    "@types/react": "^0.14.49",
+    "@types/react-dom": "^0.14.18",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "typescript": "^2.0.10"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-typescript": "^2.8.0",
+    "typescript": "latest",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
