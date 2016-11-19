@@ -10,7 +10,7 @@ A website with USA statistics.
 
 From repo:
 ```bash
-git clone https://github.com/twitchax/usastats.git
+git clone https://github.com/USAStats/usastats.git
 npm install
 npm start
 ```
