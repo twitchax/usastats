@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface TitleProps { compiler: string; framework: string; }
+export interface TitleProps { }
 
 export class Title extends React.Component<TitleProps, {}> {
     render() {

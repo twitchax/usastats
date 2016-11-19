@@ -6,6 +6,7 @@ var ts = require('gulp-typescript');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var del = require('del');
+var runSequence = require('run-sequence');
 
 var webProject = ts.createProject('src/web/tsconfig.json', { typescript: typescript });
 var serverProject = ts.createProject('src/server/tsconfig.json', { typescript: typescript });
@@ -30,7 +31,11 @@ gulp.task('compileServer', function () {
 });
 
 gulp.task('clean', function (done) {
-    del(['.buildtmp'], done.bind(this));
+    del(['.buildtmp/**/*', 'dist/**/*'], done.bind(this));
 });
 
 gulp.task('build', ['bundleWeb', 'compileServer']);
+
+gulp.task('rebuild', function() {
+    return runSequence('clean', 'build');
+});
